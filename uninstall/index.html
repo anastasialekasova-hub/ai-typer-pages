@@ -116,12 +116,11 @@
 
 <script>
   // Responses land in a Google Form (and its linked Google Sheet).
-  // Fill these in from the form's pre-filled link (three dots -> "Get pre-filled link"); empty = submit is a no-op
-  // that still shows the thank-you state. The "Why did you remove it?" question in the form must list the four
-  // options above, letter for letter.
-  var FORM_ID = '';
-  var ENTRY_REASON = '';
-  var ENTRY_DETAILS = '';
+  // Form "AI Typer exit page". Entry ids read from the form's public viewform page.
+  // The "Why did you remove it?" question in the form must list the four options above, letter for letter.
+  var FORM_ID = '1FAIpQLSdbHx0e08ew_j4seGtnXkIAWtSUobOIXKrouy9fmoX8BP9rIg';
+  var ENTRY_REASON = 'entry.622356114';
+  var ENTRY_DETAILS = 'entry.2073003325';
 
   document.getElementById('feedback').addEventListener('submit', function (e) {
     e.preventDefault();

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Typer is installed</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27 fill=%27none%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%2711.2%27 fill=%27%237138b6%27/%3E%3Cpath d=%27M2 2.5h6M5 2.5v7M8 9.5h2.5%27 transform=%27translate(2.8 2.8) scale(2.8667)%27 stroke=%27%23fcfbfe%27 stroke-width=%271.8%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap">
+<!-- Paste your Google Analytics tag here -->
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  /* Product palette: the app's dark theme (neutrals hue 300, accent oklch(78% 0.13 300); light accent oklch(49% 0.19 300)). */
+  :root {
+    --bg: #141119;
+    --surface: #1d1a23;
+    --border: #36323e;
+    --text: #e9e6ee;
+    --muted: #aca8b6;
+    --faint: #827d8c;
+    --accent: #c4a4fe;
+    --accent-hover: #d5baff;
+    --accent-ink: #170f23;
+    --red: #ff6b63;
+  }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 17px/1.55 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+  }
+  .shell { max-width: 780px; margin: 0 auto; padding: 24px 24px 64px; }
+
+  .brand { display: flex; align-items: center; gap: 13px; margin-bottom: 26px; }
+  .mark { display: flex; flex: 0 0 auto; }
+  .brand b { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  h1 { font-size: 31px; line-height: 1.16; letter-spacing: -0.02em; text-wrap: balance; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lede { margin-top: 10px; font-size: 18px; color: var(--muted); max-width: 60ch; }
+
+  .step { margin-top: 26px; }
+  .step h2 { font-size: 24px; letter-spacing: -0.01em; }
+  .step > p { margin-top: 8px; color: var(--muted); max-width: 60ch; }
+  strong { font-weight: 600; color: var(--text); }
+  b.n { color: var(--red); font-weight: 700; }
+
+  /* Annotated pictures break out of the text column so the UI reads big. */
+  .shot {
+    position: relative; margin-top: 16px; border-radius: 14px; overflow: hidden;
+    border: 1px solid var(--border); box-shadow: 0 18px 50px rgba(0,0,0,.45); background: var(--surface);
+    width: min(94vw, 780px);
+    left: 50%; transform: translateX(-50%);
+  }
+  .shot img { width: 100%; height: auto; display: block; }
+
+  .cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    margin-top: 22px; min-height: 56px; padding: 0 30px; border-radius: 14px;
+    background: var(--accent); color: var(--accent-ink); text-decoration: none;
+    font-size: 19px; font-weight: 700;
+  }
+  .cta:hover { background: var(--accent-hover); }
+  .cta svg { flex: 0 0 auto; }
+  @media (max-width: 520px) { .cta { display: flex; width: 100%; } }
+
+  .fine { margin-top: 28px; padding: 16px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--muted); font-size: 15.5px; }
+  .fine p + p { margin-top: 6px; }
+
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--faint); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="11.2" fill="#7138b6"/><path d="M2 2.5h6M5 2.5v7M8 9.5h2.5" transform="translate(2.8 2.8) scale(2.8667)" stroke="#fcfbfe" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <b>AI Typer</b>
+    </div>
+    <h1>AI Typer is installed. Pin it, then open a Google Doc — <em>it types there, key by key.</em></h1>
+    <p class="lede">Chrome hides new extensions behind the puzzle icon. Pin AI Typer first — it takes two clicks.</p>
+    <section class="step">
+      <div class="shot">
+        <img src="step-1-2-pin.png" alt="Chrome toolbar with the Extensions menu open: 1 — click the puzzle icon, 2 — click the pin next to AI Typer" width="1760" height="660">
+      </div>
+    </section>
+    <section class="step">
+      <h2>Open a Google Doc and click the icon</h2>
+      <p>With a document open, click the pinned icon <b class="n">3</b> — the AI Typer panel opens next to it.
+         Pick <strong>Write with AI</strong> <b class="n">4</b> and describe what you need, or <strong>Paste your text</strong> if you already have it.
+         Then set the pace and press <strong>Start typing</strong>.</p>
+      <div class="shot">
+        <img src="step-3-4-panel.png" alt="A Google Doc with the AI Typer side panel open: 3 — the pinned AI Typer icon in the toolbar, 4 — the Write with AI card on the panel's first screen" width="1760" height="1000">
+      </div>
+      <a class="cta" href="https://docs.google.com/document/"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Open Google Docs</a>
+    </section>
+    <div class="fine">
+      <p>AI Typer works in Google Docs only. You get 5 AI drafts a day; typing your own text has no limit.
+         The text is typed as plain paragraphs — add headings and formatting yourself.</p>
+      <p>Tip: <strong>Alt+Shift+Y</strong> pauses and resumes typing (<strong>Option+Shift+Y</strong> on a Mac).</p>
+    </div>
+    <footer>
+      Questions or a bug? <a href="https://github.com/anastasialekasova-hub/ai-typer-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.
+      &nbsp;·&nbsp; <a href="https://anastasialekasova-hub.github.io/ai-typer-privacy/">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>

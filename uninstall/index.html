@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Typer was removed</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27 fill=%27none%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%2711.2%27 fill=%27%237138b6%27/%3E%3Cpath d=%27M2 2.5h6M5 2.5v7M8 9.5h2.5%27 transform=%27translate(2.8 2.8) scale(2.8667)%27 stroke=%27%23fcfbfe%27 stroke-width=%271.8%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap">
+<!-- Paste your Google Analytics tag here -->
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  /* Product palette: the app's dark theme (neutrals hue 300, accent oklch(78% 0.13 300)). */
+  :root {
+    --bg: #141119;
+    --surface: #1d1a23;
+    --checked: #241c31;
+    --border: #36323e;
+    --border-hover: #575360;
+    --text: #e9e6ee;
+    --muted: #aca8b6;
+    --faint: #827d8c;
+    --accent: #c4a4fe;
+    --accent-hover: #d5baff;
+    --accent-ink: #170f23;
+  }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 17px/1.55 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+  }
+  .shell { max-width: 640px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  .brand { display: flex; align-items: center; gap: 13px; margin-bottom: 36px; }
+  .mark { display: flex; flex: 0 0 auto; }
+  .brand b { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  form { margin-top: 8px; }
+  .q { font-size: 14px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--accent); }
+
+  .options { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .opt {
+    display: flex; align-items: center; gap: 12px; position: relative;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+    padding: 14px 16px; cursor: pointer; font-size: 16.5px;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .opt:hover { border-color: var(--border-hover); }
+  .opt input { position: absolute; opacity: 0; }
+  .opt .dot {
+    width: 20px; height: 20px; border-radius: 50%; flex: 0 0 auto;
+    border: 2px solid var(--border-hover); transition: border-color .15s ease;
+  }
+  .opt:has(input:checked) { border-color: var(--accent); background: var(--checked); }
+  .opt:has(input:checked) .dot { border-color: var(--accent); border-width: 6px; }
+  .opt:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .q2 { margin-top: 28px; }
+  textarea {
+    margin-top: 14px; width: 100%; min-height: 96px; resize: vertical;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+    color: var(--text); padding: 13px 16px; font: inherit; font-size: 16px;
+  }
+  textarea::placeholder { color: var(--faint); }
+  textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+
+  .send {
+    margin-top: 24px; padding: 14px 28px; border: 0; border-radius: 12px;
+    background: var(--accent); color: var(--accent-ink); font: inherit; font-size: 17px; font-weight: 700;
+    cursor: pointer;
+  }
+  .send:hover { background: var(--accent-hover); }
+  .send:disabled { opacity: .5; cursor: default; }
+
+  .note { margin-top: 28px; font-size: 14px; color: var(--faint); max-width: 56ch; }
+  .note a { color: var(--muted); }
+
+  .thanks { display: none; margin-top: 16px; }
+  .thanks h2 { font-size: 26px; letter-spacing: -0.01em; }
+  .thanks p { margin-top: 10px; color: var(--muted); max-width: 52ch; }
+  body[data-sent="true"] form { display: none; }
+  body[data-sent="true"] .thanks { display: block; }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="11.2" fill="#7138b6"/><path d="M2 2.5h6M5 2.5v7M8 9.5h2.5" transform="translate(2.8 2.8) scale(2.8667)" stroke="#fcfbfe" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+      <b>AI Typer</b>
+    </div>
+
+    <form id="feedback">
+      <div class="q">Why did you remove it?</div>
+      <div class="options">
+        <label class="opt"><input type="radio" name="reason" value="Typing did not work in my document"><span class="dot"></span>Typing did not work in my document</label>
+        <label class="opt"><input type="radio" name="reason" value="5 AI drafts a day is not enough"><span class="dot"></span>5 AI drafts a day is not enough</label>
+        <label class="opt"><input type="radio" name="reason" value="I needed it for Word, Slides or another editor, not Google Docs"><span class="dot"></span>I needed it for Word, Slides or another editor, not Google Docs</label>
+        <label class="opt"><input type="radio" name="reason" value="I expected something different"><span class="dot"></span>I expected something different</label>
+      </div>
+
+      <div class="q q2">Anything else?</div>
+      <textarea name="details" placeholder="Optional — what happened, or what you expected…"></textarea>
+
+      <button class="send" type="submit">Send feedback</button>
+    </form>
+
+    <div class="thanks">
+      <h2>Thank you. Every answer counts.</h2>
+      <p>Everything AI Typer kept in your browser — your typing settings, a random install ID and a draft counter — was deleted with the extension.</p>
+    </div>
+
+    <p class="note">Your documents were never read or sent anywhere: the extension cannot see the text of a document.
+       Changed your mind? <a href="https://chromewebstore.google.com/search/AI%20Typer" target="_blank" rel="noopener">Get AI Typer back from the Chrome Web Store</a>.
+       Prefer a conversation? <a href="https://github.com/anastasialekasova-hub/ai-typer-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</p>
+  </div>
+
+<script>
+  // Responses land in a Google Form (and its linked Google Sheet).
+  // Fill these in from the form's pre-filled link (three dots -> "Get pre-filled link"); empty = submit is a no-op
+  // that still shows the thank-you state. The "Why did you remove it?" question in the form must list the four
+  // options above, letter for letter.
+  var FORM_ID = '';
+  var ENTRY_REASON = '';
+  var ENTRY_DETAILS = '';
+
+  document.getElementById('feedback').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var reason = (document.querySelector('input[name="reason"]:checked') || {}).value || '';
+    var details = document.querySelector('textarea[name="details"]').value.trim();
+
+    if (FORM_ID && (reason || details)) {
+      var data = new FormData();
+      if (ENTRY_REASON && reason) data.append(ENTRY_REASON, reason);
+      if (ENTRY_DETAILS && details) data.append(ENTRY_DETAILS, details);
+      fetch('https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse',
+        { method: 'POST', mode: 'no-cors', body: data }).catch(function () {});
+    }
+    document.body.dataset.sent = 'true';
+  });
+</script>
+</body>
+</html>
